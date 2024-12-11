@@ -1,0 +1,208 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Improved font for readability */
+}
+
+#qrcode {
+  display: flex;
+  justify-content: center;
+}
+
+#qrcode img {
+  width: 55% !important;
+}
+
+.url {
+  color: #233772;
+  padding-top: 2rem !important;
+  margin-bottom: 0 !important;
+  text-align: center; /* Centered text */
+}
+
+.image-fluid {
+  width: 15% !important;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center; /* Aligns .cont to the left */
+  align-items: center;
+  padding-left: 2rem; /* Adds space on the left side */
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  background: url('../../../../assets/Egypt-national-flag-on-transparent-PNG.png');
+  background-size: cover;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  opacity: 0.7; /* Semi-transparent overlay */
+  z-index: -1; /* Ensures the overlay is behind the content */
+}
+
+
+.cont {
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: left; /* Aligns text to the left */
+  max-width: 400px; /* Optional: Set a max width for .cont */
+}
+.cont img {
+  width: 50%;
+  height: 50%;
+  border-radius: 10%;
+  margin-bottom: 1rem; /* Space below the image */
+}
+
+.cont h2, .cont h3, .cont h4 {
+  margin: 0.5rem 0;
+}
+
+.cont h4::after {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  left: 19px;
+  width: 70%;
+  background-color: black;
+  height: 7px;
+}
+
+.left {
+  background-color: #233772;
+  color: white;
+  width: 30% !important;
+  padding: 20px 7px !important;
+  position: relative;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.left::after {
+  content: "";
+  position: absolute;
+  width: 51%;
+  height: 14%;
+  background-color: white;
+  left: -21px;
+  top: -12px;
+}
+
+.right {
+  background-color: #89B292;
+  color: black;
+  width: 35% !important;
+  padding: 20px 7px !important;
+  position: relative;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.one {
+  background-color: #89B292;
+  padding: 3px 3px 10px 20px;
+  direction: rtl;
+}
+
+.right::after {
+  content: "";
+  position: absolute;
+  width: 51%;
+  height: 14%;
+  background-color: white;
+  right: -27px;
+  top: -6px;
+}
+
+ol {
+  direction: rtl;
+  padding: 0 1rem; /* Padding for ordered list */
+}
+
+.mb-1 {
+  margin-bottom: 0 !important;
+}
+
+.QR_one {
+  padding-top: 4rem;
+}
+
+.color {
+  background: #233772;
+  color: white;
+  display: flex;
+  border-top-left-radius: 17px;
+  padding-inline: 13px;
+  justify-content: space-between;
+}
+
+.two {
+  width: 30px !important;
+  height: 30px;
+  background: #233772;
+}
+
+.image_info {
+  width: 25% !important;
+  height: 50%;
+}
+.span,h2,h3{
+
+  display: inline-block;
+  font-weight: 600;
+  direction: rtl;
+  font-weight: bold;
+
+  } 
+  .span{
+font-size: 18px;
+font-weight: bold;
+
+  }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .image-fluid {
+      width: 40% !important; /* Adjust logo size for mobile */
+  }
+
+  .content {
+      height: auto; /* Allow content height to adjust */
+      padding: 1rem; /* Add padding */
+  }
+
+  .cont {
+      padding: 1rem; /* Ensure adequate padding */
+  }
+
+  .cont img {
+      width: 80%; /* Make employee photo larger on mobile */
+  }
+
+  .left, .right {
+      width: 100% !important; /* Stack left and right sections */
+      padding: 1rem; /* Adjust padding for mobile */
+      margin-bottom: 1rem; /* Space between sections */
+  }
+
+  .color {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: flex-start; /* Align items to the start */
+  }
+
+  .url {
+      font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  ol {
+      padding: 0 1rem; /* Add padding for ordered list */
+  }
+ 
+
+}

@@ -1,0 +1,50 @@
+
+<div class="container"></div>
+	<nav class="d-flex justify-content-between align-items-center ">
+		<div class="logs ">
+		 
+			<img src="../../../../assets/Logo_Edge-Pro_Ver3_light_blue.png" class="image-fluid" alt="">
+	</div>
+	<div class="line_one d-flex justify-content-end">
+		<img src="../../../../assets/rsc.png" class="image-fluid" alt="">
+	
+	</div>
+	</nav>
+	<section class=" line d-flex justify-content-center pb-5">
+		<p class="fs-2 fw-bold">المركز التكنولوجي للتسجيل المساحي العقاري
+	</section>
+	<div *ngIf="employee">
+      <section class="content">
+    <!-- <div class="con">
+    </div> -->
+    <div class="cont  d-flex justify-content-center align-items-center flex-column">
+		<img [src]="employee.photo" alt="Employee Photo"  />
+		 <!-- <img  src="assets/مصطفي احمد لطفي عثمان (1).png"  > -->
+	    <span class="span">الاسم: <h2 > {{ employee.name }}</h2></span> 
+		<span class="span"> الرقم القومي:<h3>{{employee.identefy}}</h3></span>
+		<span class="span">شركة : <h3> {{employee.company_name }}</h3></span>
+		<span class="span"> العنوان:<h3>{{ employee.adress}}</h3></span>
+					<h3>مساح أراضي</h3>
+    </div>
+</section>
+</div> 
+<footer class="QR">
+        <div class="row">
+
+          <div class="col after position-relative d-flex   align-items-stretch">
+			<div class="one d-flex flex-column justify-content-between w-100 ">
+		<h1>للشكاوي </h1>
+		<p class="color"><span>اتصل علي </span> <span>0225479199</span></p>
+		<p class="d-flex  color"><span> خدمة whatsApp</span> <span>01273377445</span></p>
+		<h4>لتقديم</h4>
+	<ol>
+		<li>طلب تعديل او نسخة اضافية </li>
+		<li>استعلام عن رقم القطعة  والحوض او الدمج والتجزئة او الترقيم خارج</li>
+	</ol>
+		
+		<p class="d-flex color"> من خلال الموقع الالكتروني <span>rsc.mped.gov.eg</span></p>
+		</div>
+        </div>
+        </div>
+
+	
