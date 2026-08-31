@@ -1,0 +1,71 @@
+
+
+
+<div class="container-fluid">
+  
+  <mat-card class="cart d-flex flex-row" *ngFor="let item of employee; let i = index">
+    <mat-card-content class="content flex-column">
+      <nav class="d-flex justify-content-between flex-ms-row align-items-center pt-1 ">
+        <div class="logs">
+          <img src="/assets/rsc1.png" class="img-fluid rse">
+        </div>
+        <div class="line d-flex justify-content-center text-center ">
+          <p class=" fw-bold text-bl">المركز التكنولوجي للتسجيل المساحي العقاري</p>
+        </div>
+        <div class="line_one">
+          <img src="../../../assets/Logo_Edge-Pro_Ver3_light_blue_resized (1).png " class="img-fluid more">
+        </div>
+      </nav>      
+      <section class="content nthr d-flex justify-content-between" style="width: 100%;">
+        <!-- العنصر الذي يحتوي على النص -->
+        <div class="cont-one d-flex  flex-column" style="width: 60%;">
+          <span class="span "> 
+            <h2> الاسم :{{ item.name.split(' ').slice(0, 3).join(' ') }}</h2>
+          </span>
+          <span class="span2">شركة:<h3>{{item.company_name}}</h3></span>
+       <h4>التخصص: مساح ارض </h4>
+        </div>
+      
+        <!-- العنصر الذي يحتوي على الصورة ليكون أقصى اليمين -->
+        <div class="cont d-flex align-items-center" style="width: 40%;">
+          <!-- <img src="assets/مصطفي احمد لطفي عثمان (1).png" class="image_info"> -->
+           <img [src]="item.photo"  class="image_info">
+        </div>
+      </section>
+      
+      
+  
+ <section class=" d-flex four">
+  
+  <div class="row d-flex justify-content-between flex-column " style="width: 20%;">
+    
+    <!-- <zxing-scanner (scanSuccess)="scanQrCode($event)"></zxing-scanner> -->
+
+    <div class="col d-flex  " >
+      <div class="center d-flex flex-column">
+        <div id="col " class="d-flex  align-items-center">
+          
+          <img class="qrcode_image"  [src]="item.qrCodeBase64" (click)="scanQrCode(item.qrCodeBase64)">
+          <!-- home.component.html -->
+       <!-- <zxing-scanner (scanSuccess)="scanQrCode($event)"></zxing-scanner> -->
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <div class="col d-flex  justify-content-center align-items-center ggg ">
+
+    <p class=" fw-bold url ">rsc.mped.gov.eg &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; :الموقع الالكتروني</p>
+    <!-- <p class=" fw-bold url1">الموقع الالكتروني</p> -->
+  </div>
+  </section>
+       
+      
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,105 @@
+/* Extra small devices (phones, 600px and down) */
+@media all and (max-width: 768px) {
+    .image-fluid
+    {
+      width: 28% !important;
+    }
+    .flex-ms-row
+    {
+        flex-direction: row !important;
+    }
+    
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media all and (min-width: 300px) {
+    .image-fluid
+    {
+      width: 40% !important;
+    }
+    .fs-2
+    {
+        font-size: 1rem !important;
+        font-weight:600
+    }
+    /* .content {
+    
+        background-position: center center;
+        background-size: 131%;
+        background-repeat: no-repeat;
+        height: 36vh;
+        position: relative;
+    } */
+    .right,
+.left 
+{
+    width: 100% !important;
+}
+.QR 
+{
+    font-size: 1rem !important;
+}
+/* .QR_one {
+    padding-top: 1rem !important;
+} */
+
+    
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media all and (min-width: 768px) {
+    .image-fluid
+    {
+      width: 25% !important;
+    }
+/* 
+    .content
+{
+
+
+  background-position:  center center;
+  background-size: 73%;
+  background-repeat: no-repeat;
+  height: 36vh;
+  position: relative;
+} */
+.fs-2
+{
+    font-size: 1rem !important;
+    font-weight:600;
+}
+.right,
+.left 
+{
+    width: 70% !important;
+}
+.QR
+{
+    font-size: 1.3rem !important;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media all and (min-width: 992px) {
+    .image-fluid
+    {
+      width: 20% !important;
+    }
+    .right,
+    .left 
+    {
+        width: 35% !important;
+    }
+    .fs-2
+    {
+        font-size: 1rem !important;
+        font-weight:600;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+}
