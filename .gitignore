@@ -2,18 +2,20 @@
 .vs/
 **/.vs/
 
-# Build output
-bin/
-obj/
+# .NET
+**/bin/
+**/obj/
+
+# Node
+**/node_modules/
 
 # Angular
-node_modules/
-dist/
+**/dist/
 
 # Logs
 *.log
 
-# Environment files
+# Environment
 .env
 .env.*
 
