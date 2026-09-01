@@ -14,8 +14,8 @@ WORKDIR /app
 
 COPY --from=build /app/publish .
 
-ENV ASPNETCORE_URLS=http://+:8081
+ENV ASPNETCORE_URLS=http://+:10000
 
-EXPOSE 8081
+EXPOSE 10000
 
 ENTRYPOINT ["dotnet", "EmployeeQRcode.dll"]
