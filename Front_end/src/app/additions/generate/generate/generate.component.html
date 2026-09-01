@@ -1,50 +1,211 @@
+<div class="employee-page">
 
-<div class="container"></div>
-	<nav class="d-flex justify-content-between align-items-center ">
-		<div class="logs ">
-		 
-			<img src="../../../../assets/Logo_Edge-Pro_Ver3_light_blue.png" class="image-fluid" alt="">
-	</div>
-	<div class="line_one d-flex justify-content-end">
-		<img src="../../../../assets/rsc.png" class="image-fluid" alt="">
-	
-	</div>
-	</nav>
-	<section class=" line d-flex justify-content-center pb-5">
-		<p class="fs-2 fw-bold">المركز التكنولوجي للتسجيل المساحي العقاري
-	</section>
-	<div *ngIf="employee">
-      <section class="content">
-    <!-- <div class="con">
-    </div> -->
-    <div class="cont  d-flex justify-content-center align-items-center flex-column">
-		<img [src]="employee.photo" alt="Employee Photo"  />
-		 <!-- <img  src="assets/مصطفي احمد لطفي عثمان (1).png"  > -->
-	    <span class="span">الاسم: <h2 > {{ employee.name }}</h2></span> 
-		<span class="span"> الرقم القومي:<h3>{{employee.identefy}}</h3></span>
-		<span class="span">شركة : <h3> {{employee.company_name }}</h3></span>
-		<span class="span"> العنوان:<h3>{{ employee.adress}}</h3></span>
-					<h3>مساح أراضي</h3>
+  <!-- ================= HEADER ================= -->
+
+  <header class="page-header">
+
+    <div class="header-logo edge-logo">
+      <img
+        src="../../../../assets/Logo_Edge-Pro_Ver3_light_blue.png"
+        alt="Edge Pro">
     </div>
-</section>
-</div> 
-<footer class="QR">
-        <div class="row">
 
-          <div class="col after position-relative d-flex   align-items-stretch">
-			<div class="one d-flex flex-column justify-content-between w-100 ">
-		<h1>للشكاوي </h1>
-		<p class="color"><span>اتصل علي </span> <span>0225479199</span></p>
-		<p class="d-flex  color"><span> خدمة whatsApp</span> <span>01273377445</span></p>
-		<h4>لتقديم</h4>
-	<ol>
-		<li>طلب تعديل او نسخة اضافية </li>
-		<li>استعلام عن رقم القطعة  والحوض او الدمج والتجزئة او الترقيم خارج</li>
-	</ol>
-		
-		<p class="d-flex color"> من خلال الموقع الالكتروني <span>rsc.mped.gov.eg</span></p>
-		</div>
-        </div>
+    <div class="header-logo rsc-logo">
+      <img
+        src="../../../../assets/rsc.png"
+        alt="RSC">
+    </div>
+
+  </header>
+
+
+  <!-- ================= TITLE ================= -->
+
+  <section class="page-title">
+
+    <div class="title-line"></div>
+
+    <h1>
+      المركز التكنولوجي للتسجيل المساحي العقاري
+    </h1>
+
+    <div class="title-line"></div>
+
+  </section>
+
+
+  <!-- ================= EMPLOYEE ================= -->
+
+  <section
+    class="employee-section"
+    *ngIf="employee">
+
+    <!-- Egypt Flag -->
+    <div class="egypt-background"></div>
+
+
+    <div class="employee-card">
+
+      <!-- Photo -->
+
+      <div class="employee-photo-wrapper">
+
+        <img
+          [src]="employee.photo"
+          alt="Employee Photo"
+          class="employee-photo">
+
+      </div>
+
+
+      <!-- Information -->
+
+      <div class="employee-info">
+
+        <div class="info-row">
+
+          <span class="label">
+            الاسم :
+          </span>
+
+          <span class="value">
+            {{ employee.name }}
+          </span>
+
         </div>
 
-	
+
+        <div class="info-row">
+
+          <span class="label">
+            الرقم القومي :
+          </span>
+
+          <span class="value">
+            {{ employee.identefy }}
+          </span>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <span class="label">
+            الشركة :
+          </span>
+
+          <span class="value">
+            {{ employee.company_name }}
+          </span>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <span class="label">
+            العنوان :
+          </span>
+
+          <span class="value">
+            {{ employee.adress }}
+          </span>
+
+        </div>
+
+
+        <div class="job-title">
+          مساح أراضي
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= COMPLAINTS ================= -->
+
+  <footer class="complaints-section">
+
+    <div class="complaints-content">
+
+      <div class="complaints-heading">
+
+        <span class="heading-icon">
+          !
+        </span>
+
+        <h2>
+          للشكاوي والاستفسارات
+        </h2>
+
+      </div>
+
+
+      <div class="contact-row">
+
+        <div class="contact-item">
+
+          <span class="contact-label">
+            اتصل على
+          </span>
+
+          <span class="contact-number">
+            0225479199
+          </span>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <span class="contact-label">
+            خدمة WhatsApp
+          </span>
+
+          <span class="contact-number">
+            01273377445
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="request-title">
+        لتقديم الطلبات والاستعلام عن الخدمات
+      </div>
+
+
+      <ol class="request-list">
+
+        <li>
+          طلب تعديل أو نسخة إضافية.
+        </li>
+
+        <li>
+          الاستعلام عن رقم القطعة والحوض أو الدمج والتجزئة أو الترقيم خارج الموقع.
+        </li>
+
+      </ol>
+
+
+      <div class="website">
+
+        <span>
+          من خلال الموقع الإلكتروني
+        </span>
+
+        <strong>
+          rsc.mped.gov.eg
+        </strong>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</div>

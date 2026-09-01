@@ -138,7 +138,7 @@ namespace EmployeeQRcode.Controllers
         // Generate QR Code as Base64 string
         private string GenerateQrCode(int employeeId)
         {
-            string url = $"http://localhost:4200/generate/{employeeId}"; var qrGenerator = new QRCodeGenerator();
+            string url = $"https://vh-prod-qrcode-project-main-3e2df2-393f3908.livemy.site/generate/{employeeId}"; var qrGenerator = new QRCodeGenerator();
             var qrCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
             var qrCode = new Base64QRCode(qrCodeData);
             return "data:image/png;base64," + qrCode.GetGraphic(20); // Add data type prefix

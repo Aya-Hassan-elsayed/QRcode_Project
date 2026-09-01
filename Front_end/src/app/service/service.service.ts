@@ -7,7 +7,7 @@ import { employee } from '../interface/emp';
   providedIn: 'root'
 })
 export class ServiceService {
-  Url: string = "https://localhost:44367/api/Employee";
+  Url: string = "https://vh-prod-qrcode-project-main-3e2df2-393f3908.livemy.site/api/Employee";
   constructor(private _HttpClient:HttpClient){}
 
 getallData():Observable<employee[]>
