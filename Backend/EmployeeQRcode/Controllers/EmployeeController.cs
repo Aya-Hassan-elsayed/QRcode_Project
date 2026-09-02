@@ -1,4 +1,5 @@
-﻿using EmployeeQRcode.EFCore;
+﻿
+using EmployeeQRcode.EFCore;
 using Microsoft.AspNetCore.Mvc;
 using QRCoder;
 using ZXing;
@@ -32,11 +33,8 @@ namespace EmployeeQRcode.Controllers
                     e.id,
                     e.name,
                     // photo = $"http://rscapps.edge-pro.com:5467/images/{Path.GetFileName(e.photo)}",
-                    photo =e.photo,
+                    photo = e.photo,
                     e.company_name,
-                   
-
-
                 })
                 .ToList();
 
@@ -46,7 +44,6 @@ namespace EmployeeQRcode.Controllers
                 e.name,
                 e.photo,
                 e.company_name,
-               
                 QrCodeBase64 = GenerateQrCode(e.id)
             }).ToList();
 
@@ -58,11 +55,11 @@ namespace EmployeeQRcode.Controllers
         {
             try
             {
-                var qrCodeText = DecodeQrCode(request.QrCodeBase64);  // فك تشفير الـ QR Code
-                var employeeId = qrCodeText.Split('/').Last(); // استخدم المعرف الموجود في الـ QR Code
+                var qrCodeText = DecodeQrCode(request.QrCodeBase64);
+                var employeeId = qrCodeText.Split('/').Last();
 
                 var employee = _context.Employees
-                    .Where(e => e.id.ToString() == employeeId) // استخدام المعرف
+                    .Where(e => e.id.ToString() == employeeId)
                     .Select(e => new
                     {
                         e.id,
@@ -71,7 +68,6 @@ namespace EmployeeQRcode.Controllers
                         e.company_name,
                         e.identefy,
                         e.adress
-
                     })
                     .FirstOrDefault();
 
@@ -87,12 +83,13 @@ namespace EmployeeQRcode.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
-        // إضافة دالة جديدة لاسترجاع بيانات الموظف بناءً على ID
+
+        // استرجاع بيانات الموظف بناءً على ID
         [HttpGet("{id}")]
         public ActionResult GetEmployeeById(int id)
         {
             var employee = _context.Employees
-                .Where(e => e.id == id) // البحث عن الموظف باستخدام المعرف (ID)
+                .Where(e => e.id == id)
                 .Select(e => new
                 {
                     e.id,
@@ -110,7 +107,6 @@ namespace EmployeeQRcode.Controllers
                 return NotFound(new { message = "Employee not found" });
             }
 
-            // توليد QR Code بعد أن تم جلب البيانات
             var employeeWithQrCode = new
             {
                 employee.id,
@@ -125,10 +121,6 @@ namespace EmployeeQRcode.Controllers
             return Ok(employeeWithQrCode);
         }
 
-
-
-
-
         // كلاس مخصص لاستقبال qrCodeBase64 فقط
         public class QrCodeRequesta
         {
@@ -138,10 +130,19 @@ namespace EmployeeQRcode.Controllers
         // Generate QR Code as Base64 string
         private string GenerateQrCode(int employeeId)
         {
-            string url = $"https://vh-prod-qrcode-project-main-3e2df2-393f3908.livemy.site/generate/{employeeId}"; var qrGenerator = new QRCodeGenerator();
-            var qrCodeData = qrGenerator.CreateQrCode(url, QRCodeGenerator.ECCLevel.Q);
+            string url =
+                $"https://vh-prod-qrcode-project-main-3e2df2-393f3908.livemy.site/generate/{employeeId}";
+
+            var qrGenerator = new QRCodeGenerator();
+
+            var qrCodeData = qrGenerator.CreateQrCode(
+                url,
+                QRCodeGenerator.ECCLevel.M
+            );
+
             var qrCode = new Base64QRCode(qrCodeData);
-            return "data:image/png;base64," + qrCode.GetGraphic(20); // Add data type prefix
+
+            return "data:image/png;base64," + qrCode.GetGraphic(20);
         }
 
         // Decode QR Code from Base64 string
@@ -149,18 +150,23 @@ namespace EmployeeQRcode.Controllers
         {
             try
             {
-                byte[] qrCodeBytes = Convert.FromBase64String(qrCodeBase64.Replace("data:image/png;base64,", "")); // إزالة البادئة
+                byte[] qrCodeBytes = Convert.FromBase64String(
+                    qrCodeBase64.Replace("data:image/png;base64,", "")
+                );
 
                 using (var ms = new MemoryStream(qrCodeBytes))
                 {
                     using (var bitmap = new Bitmap(ms))
                     {
                         var reader = new BarcodeReader();
+
                         var result = reader.Decode(bitmap);
+
                         if (result != null)
                         {
-                            return result.Text; // هنا نعيد نص الـ QR code
+                            return result.Text;
                         }
+
                         throw new Exception("Unable to decode QR code.");
                     }
                 }
@@ -172,3 +178,4 @@ namespace EmployeeQRcode.Controllers
         }
     }
 }
+
