@@ -131,7 +131,7 @@ namespace EmployeeQRcode.Controllers
         private string GenerateQrCode(int employeeId)
         {
             string url =
-                $"http://employee-qrcode.runasp.net/generate/{employeeId}";
+                $"https://employee-qrcode.runasp.net/generate/{employeeId}";
 
             var qrGenerator = new QRCodeGenerator();
 

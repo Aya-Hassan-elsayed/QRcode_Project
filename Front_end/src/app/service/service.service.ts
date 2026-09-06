@@ -7,7 +7,7 @@ import { employee } from '../interface/emp';
   providedIn: 'root'
 })
 export class ServiceService {
-  Url: string = "http://employee-qrcode.runasp.net/api/Employee";
+  Url: string = "https://employee-qrcode.runasp.net/api/Employee";
   constructor(private _HttpClient:HttpClient){}
 
 getallData():Observable<employee[]>
