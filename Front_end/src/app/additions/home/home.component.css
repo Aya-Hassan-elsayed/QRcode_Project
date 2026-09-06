@@ -1,279 +1,969 @@
+/* =========================================================
+   GENERAL SCREEN STYLES
+   ========================================================= */
+
 .container-fluid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
- padding: 20px !important;
-  border: 5px solid black; 
+
+  padding: 20px !important;
+
+  border: 5px solid black;
+
+  box-sizing: border-box;
 }
 
-/* الكارت */
+
+/* =========================================================
+   EMPLOYEE CARD
+   ========================================================= */
+
 .cart {
   flex: 0 0 50%;
-  margin: 0; 
-  padding: 0; 
+
+  margin: 0;
+  padding: 0;
+
   box-sizing: border-box;
 
-  height: 24vh!important;
+  height: 24vh !important;
 }
 
+
+/* Angular Material Card */
 .mat-card-content {
-  padding: 0; 
-}
-.mat-mdc-card-content:first-child {
-padding: 0 !important;
+  padding: 0;
 }
 
+.mat-mdc-card-content:first-child {
+  padding: 0 !important;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
 
 .img-fluid {
   width: 90%;
 }
-.rse
-{
+
+.rse {
   width: 70% !important;
 }
 
+
+/* Employee Photo */
 .image_info {
   width: 70% !important;
   height: 50%;
-  /* padding-bottom: 3px; */
-  /* border-radius: 50%; */
-  
+
+  object-fit: cover;
 }
-.span{
-direction: rtl;
+
+
+/* =========================================================
+   EMPLOYEE INFORMATION AREA
+   ========================================================= */
+
+.span {
+  direction: rtl;
 }
-.nthr
-{
+
+.nthr {
   position: relative;
+
   width: 100%;
   height: 15vh;
 }
-.nthr::before
-{
+
+
+/* Egyptian flag background */
+.nthr::before {
   content: "";
+
   position: absolute;
+
   width: 100%;
   height: 130%;
-    background: url('../../../assets/Egypt-national-flag-on-transparent-PNG.png');
-    /* background-position: center; */
-    background-size: cover;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
-  opacity: 0.7;
 
+  background: url('../../../assets/Egypt-national-flag-on-transparent-PNG.png');
+
+  background-size: cover;
+
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+
+  opacity: 0.7;
 }
-.span2,h3{
-padding: 0;
-display: inline-block;
-font-size: 16px;
-font-weight: 500;
-direction: rtl;
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.span2,
+h3 {
+  padding: 0;
+
+  display: inline-block;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  direction: rtl;
 }
- .line
-{
-font-weight: 700;
-font-size: 18px;
-} 
+
+
+.line {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
 h2 {
   font-size: 16px;
-  font-weight:600;
+  font-weight: 600;
+
   margin-block: 3px !important;
+
   text-align: center;
 }
-h3{
+
+
+h3 {
   font-size: 16px;
   font-weight: 500;
 }
+
 
 h4 {
   font-size: 16px;
   font-weight: 500;
-
 }
 
+
+/* =========================================================
+   EMPLOYEE TEXT CONTAINER
+   ========================================================= */
 
 .con {
   position: absolute;
+
   width: 100%;
   height: 100%;
+
   background-color: white;
+
   opacity: 0.9;
 }
-.cont-one
-{
+
+
+.cont-one {
   position: relative;
 
   align-items: end !important;
-    /* width: 80% !important; */
-    display: flex !important;
-    justify-content: center !important;
-    /* padding-left: 4rem; */
-    /* margin-left: 4rem; */
-    /* padding-bottom: 4rem; */
-        /* padding-bottom: 1rem; */
-        padding-right: 2rem;
+
+  display: flex !important;
+
+  justify-content: center !important;
+
+  padding-right: 2rem;
 }
+
+
 .cont {
   position: relative;
+
   align-items: center !important;
-  /* width: 40% !important; */
+
   display: flex !important;
+
   justify-content: center;
+
   padding-left: 3rem;
-  /* padding-top: 2rem !important; */
 }
 
 
-.ggg
-{
+/* =========================================================
+   WEBSITE
+   ========================================================= */
+
+.ggg {
   background-color: #233772;
+
   height: 20px;
 }
-.ggg p{
+
+.ggg p {
   color: #ffff;
-}
-.QR_one{
-  width: 100%;
-}
-/* تحسين شكل النص في المركز */
-
-
-/* تحسين توزيع محتوى ال navigation */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1rem;
-  overflow: hidden;
-height: 56px;
-background: rgba(243, 226, 181, 0.7);
-}
-
-.logs img, 
-.line_one img {
-  max-width: 100px;
-}
-
-.line_one {
-  display: flex;
-  justify-content: flex-end;
-}
-
-
-
-
-#qrcode {
-  display: flex;
-  justify-content: center;
-}
-.qrcode_image {
-
-  position: absolute;
-  width: 75% !important;
-  padding-top: 45px;
-  margin-left: -41px !important;
-
-}
-
-#qrcode img {
-  width: 80% !important;
- 
 }
 
 
 .url {
   color: #233772;
+
   padding-top: 0 !important;
+
   margin-bottom: 0px !important;
 }
-.url1{
-  color: goldenrod !important;
 
+
+.url1 {
+  color: goldenrod !important;
 }
 
-.web
-{
+
+.web {
   padding-top: 10px;
 }
 
 
-
-
-/* .left::after {
-  content: "";
-  position: absolute;
-  width: 51%;
-  height: 14%;
-  background-color: white;
-  left: -21px;
-  top: -12px;
-  transform: rotate(-46deg);
-} */
+/* =========================================================
+   OTHER ELEMENTS
+   ========================================================= */
 
 .right {
   background-color: #89B292;
+
   color: black;
-  width: 100% !important; /* نضبط العرض للعمود */
+
+  width: 100% !important;
+
   padding: 0px 30px !important;
+
   position: relative;
 }
 
-/* .right::after {
-  content: "";
-  position: absolute;
-  width: 51%;
-  height: 14%;
-  background-color: white;
-  right: -27px;
-  top: -6px;
-  transform: rotate(-128deg);
-} */
 
 .center {
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
+
   align-items: center;
+
   width: 74%;
+
   position: absolute;
+
   top: -37px;
 }
 
 
 .one {
   background-color: #89B292;
+
   padding-bottom: 0px !important;
+
   position: relative;
+
   padding: 3px 3px 10px 20px;
+
   direction: rtl;
 }
 
+
+/* =========================================================
+   ROW / COLUMN
+   ========================================================= */
+
 .row {
   display: flex;
-  justify-content: space-between; /* توزيع الأعمدة بالتساوي */
+
+  justify-content: space-between;
+
   width: 36% !important;
+
   position: relative;
 }
 
+
 .col {
   display: flex;
+
   justify-content: center;
+
   align-items: center;
 }
 
 
+/* =========================================================
+   HEADINGS
+   ========================================================= */
 
-.span2,h2,h3,h4{
-  color:#233772;
+.span2,
+h2,
+h3,
+h4 {
+  color: #233772;
+
   font-size: 17px;
+
   font-weight: 600;
+
   padding: 0 !important;
+
   margin: 0 !important;
 }
 
-.four
-{
+
+/* =========================================================
+   BOTTOM SECTION
+   ========================================================= */
+
+.four {
   margin-top: 1.3rem;
 }
+
+
+/* =========================================================
+   NAVBAR / HEADER
+   ========================================================= */
+
+nav {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-top: 1rem;
+
+  overflow: hidden;
+
+  height: 56px;
+
+  background: rgba(243, 226, 181, 0.7);
+}
+
+
+.logs img,
+.line_one img {
+  max-width: 100px;
+}
+
+
+.line_one {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+
+/* =========================================================
+   QR CODE
+   ========================================================= */
+
+#qrcode {
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.qrcode_image {
+  position: absolute;
+
+  width: 75% !important;
+
+  padding-top: 45px;
+
+  margin-left: -41px !important;
+}
+
+
+#qrcode img {
+  width: 80% !important;
+}
+
+
+.QR_one {
+  width: 100%;
+}
+
+
+/* =========================================================
+   =========================================================
+   SCREEN ONLY
+   هنا التعديل الجديد للشاشة فقط
+   =========================================================
+   ========================================================= */
+
+@media screen {
+
+  /* =======================================================
+     MAIN CONTAINER
+     ======================================================= */
+
+  .container-fluid {
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px 18px;
+
+    padding: 18px !important;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    border: 5px solid black;
+
+    align-items: start;
+  }
+
+
+  /* =======================================================
+     CARD
+     ======================================================= */
+
+  .cart {
+    width: 100% !important;
+
+    height: 245px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    box-sizing: border-box;
+
+    flex: none !important;
+
+    overflow: hidden;
+
+    position: relative;
+  }
+
+
+  .mat-card-content,
+  .mat-mdc-card-content:first-child {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =======================================================
+     HEADER
+     ======================================================= */
+
+  nav {
+    width: 100%;
+
+    height: 58px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 10px !important;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+
+  .logs,
+  .line,
+  .line_one {
+    position: relative;
+
+    z-index: 2;
+  }
+
+
+  .logs {
+    width: 18%;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+  }
+
+
+  .logs img {
+    width: 58px !important;
+
+    max-width: 58px !important;
+
+    height: auto;
+  }
+
+
+  .line {
+    width: 64%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .line p {
+    margin: 0 !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+  }
+
+
+  .line_one {
+    width: 18%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+  }
+
+
+  .line_one img {
+    width: 75px !important;
+
+    max-width: 75px !important;
+
+    height: auto;
+  }
+
+
+  /* =======================================================
+     EMPLOYEE INFORMATION
+     ======================================================= */
+
+  .nthr {
+    position: relative;
+
+    width: 100% !important;
+
+    height: 125px !important;
+
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    align-items: center !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    box-sizing: border-box;
+  }
+
+
+  .nthr::before {
+    width: 100%;
+
+    height: 100%;
+  }
+
+
+  /* =======================================================
+     EMPLOYEE TEXT
+     ======================================================= */
+
+  .cont-one {
+    position: relative;
+
+    z-index: 2;
+
+    width: 68% !important;
+
+    height: 100%;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    align-items: flex-end !important;
+
+    padding: 0 15px 0 8px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  .span {
+    width: 100%;
+
+    direction: rtl;
+
+    text-align: right;
+  }
+
+
+  .span h2 {
+    margin: 3px 0 !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+  }
+
+
+  .span2 {
+    width: 100%;
+
+    direction: rtl;
+
+    text-align: right;
+
+    font-size: 15px !important;
+
+    line-height: 1.5;
+  }
+
+
+  .span2 h3 {
+    margin: 0 !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.4;
+  }
+
+
+  .cont-one h4 {
+    margin: 3px 0 0 !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     EMPLOYEE PHOTO
+     ======================================================= */
+
+  .cont {
+    position: relative;
+
+    z-index: 2;
+
+    width: 32% !important;
+
+    height: 100%;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    padding: 0 12px 0 0 !important;
+
+    box-sizing: border-box;
+  }
+
+
+  .image_info {
+    width: 105px !important;
+
+    height: 72px !important;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 !important;
+  }
+
+
+  /* =======================================================
+     QR + WEBSITE
+     ======================================================= */
+
+  .four {
+    width: 100% !important;
+
+    height: 62px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    margin-top: 0 !important;
+
+    padding: 0 10px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  /* QR AREA */
+
+  .four > .row {
+    width: 28% !important;
+
+    height: 62px;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    position: relative;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+  }
+
+
+  .four .col {
+    width: 100% !important;
+
+    height: 100%;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+  }
+
+
+  .center {
+    width: 100% !important;
+
+    height: 100%;
+
+    position: relative !important;
+
+    top: auto !important;
+
+    left: auto !important;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    margin: 0 !important;
+  }
+
+
+  .qrcode_image {
+    position: relative !important;
+
+    width: 82px !important;
+
+    height: 82px !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    object-fit: contain;
+
+    cursor: pointer;
+  }
+
+
+  /* =======================================================
+     WEBSITE
+     ======================================================= */
+
+  .ggg {
+    flex: 1;
+
+    height: 24px !important;
+
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    margin: 0 !important;
+
+    padding: 0 8px !important;
+
+    box-sizing: border-box;
+  }
+
+
+  .url {
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    font-size: 12px !important;
+
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     RESET OLD POSITIONING
+     ======================================================= */
+
+  .row {
+    position: relative !important;
+  }
+
+
+  #qrcode {
+    position: relative;
+  }
+
+
+  #qrcode img {
+    width: auto !important;
+  }
+
+
+  .QR_one {
+    width: auto;
+  }
+
+
+  /* =======================================================
+     TABLET / SMALL LAPTOP
+     ======================================================= */
+
+  @media (max-width: 900px) {
+
+    .container-fluid {
+      grid-template-columns: 1fr 1fr;
+
+      gap: 10px;
+
+      padding: 10px !important;
+    }
+
+
+    .cart {
+      height: 225px !important;
+    }
+
+
+    .line p {
+      font-size: 13px !important;
+    }
+
+
+    .image_info {
+      width: 85px !important;
+
+      height: 62px !important;
+    }
+
+
+    .qrcode_image {
+      width: 70px !important;
+
+      height: 70px !important;
+    }
+
+
+    .span h2,
+    .span2 h3,
+    .cont-one h4 {
+      font-size: 13px !important;
+    }
+
+
+    .url {
+      font-size: 10px !important;
+    }
+  }
+
+
+  /* =======================================================
+     MOBILE
+     ======================================================= */
+
+  @media (max-width: 600px) {
+
+    .container-fluid {
+      grid-template-columns: 1fr;
+
+      gap: 12px;
+
+      padding: 10px !important;
+    }
+
+
+    .cart {
+      height: 245px !important;
+    }
+
+
+    .line p {
+      font-size: 12px !important;
+    }
+
+
+    .logs img {
+      width: 48px !important;
+    }
+
+
+    .line_one img {
+      width: 65px !important;
+    }
+  }
+
+}
+
+
+/* =========================================================
+   IMPORTANT
+   =========================================================
+
+   هنا يبدأ @media print الأصلي بتاعك.
+
+   سيبيه كما هو عندك بدون أي تعديل.
+   
+   @media print {
+      ..............
+      كود الـ A4 بتاعك
+      ..............
+   }
+
+   ========================================================= */
 
 
 
