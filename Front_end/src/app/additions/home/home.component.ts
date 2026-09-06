@@ -51,8 +51,6 @@ export class HomeComponent {
 
     try {
 
-      // مثال:
-      // https://vh-prod-qrcode-project-main-3e2df2-393f3908.livemy.site/generate/1
 
       const url = new URL(qrText);
 
